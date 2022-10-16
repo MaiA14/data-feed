@@ -15,7 +15,7 @@ User should be logged in in order to see feed data
 
 That's mean that user is able to see one feed at time. <br>
 
-user's table contains the following fields: <br>
+<b> user's table: </b> <br>
 user_id (Primary key) <br>
 username <br>
 pwd - password (in order to enable login functionality) <br>
@@ -23,7 +23,7 @@ email <br>
 created_on - creation time of the user <br>
 last_login (might be helpful in future feature, for example - token refresh) <br>
 
-feed's table contains the following fields: <br>
+<b> feed's table </b> <br>
 feed_id (Primary key) <br>
 user_id (foriegn key, references user table) <br>
 updated_on - timestamp to represent feed creation <br>
@@ -35,14 +35,14 @@ feed_data - json that represnts the data of the feed <br>
 
 ## Workflow
 
-<b>Login (future feature)</b> <br>
+<b> 1) Login (future feature)</b> <br>
 
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665942815/gxlq5wjbok7nf67lkjfq.jpg
 )
 
 After implementing login endpoint on server side, all the requests will be passed with Bearer token, that will make sure the system is secured.
 
-<b>Get data feed</b> <br>
+<b> 2) Get data feed</b> <br>
 Now that user is logged in, he is able to display feed
 
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665943505/g4pxxfwa7bkntqqvcpmn.jpg
