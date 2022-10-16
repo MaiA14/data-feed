@@ -63,6 +63,46 @@ In case there source is not supplied by client, server returns error
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665951480/cp5dzszhrxd9mwsi9dgs.png
 )
 
+<ins><b> 2) Filter feed </ins></b> <br>
+Filters according specified filter.<br>
+Supported filters: <br>
+- Limit results - choose the number of rows you want to see in the feed. <br>
+- Show specified columns - choose which columns you want to see in the feed <br>
+Note: you can choose one of those filters or both. <br>
+POST - http://localhost:9000/api/feed/filter <br>
+
+An example of both filters applied:
+![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665952095/jlhyxpytrgz4cyedzrnh.png
+)
+
+Try using curl:
+
+```
+curl --location --request POST 'http://localhost:9000/api/feed/filter' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: connect.sid=s%3AcwpJbF2WrTLlpin0cGFs_9d2fsyQAW2D.a%2FMWgd3wloyb7TWyrBnCSEkhwroRWd1bQbJ4dR2hUcM' \
+--data-raw '{
+    "filters": {
+        "columns": ["flight"],
+        "limit": 1
+    }
+}'
+```
+
+In case the array of columns is empty, filter consider it as not supplied (null) and returns result according the other filter, in this case - limit.
+
+![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665952367/hogscsbevd11prjbbc1e.png
+)
+
+If the body of the request is plain, server returns error <br>
+![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665952625/ry3xoabyj25j7jzanw4s.png
+)
+
+Show only flight date & flight status columns:
+
+![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665952958/y7yt4olnkf75bforw3k9.png
+)
+
 ## Installation
 
 Before running this project install node modules in both folders with this command:
