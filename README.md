@@ -48,6 +48,15 @@ Now that user is logged in, he is able to display feed
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665943505/g4pxxfwa7bkntqqvcpmn.jpg
 )
 
+<b> 3) Update record's field sepcifed by user </b> <b>
+
+![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665944757/v4h8d50sbbw1muqqnepq.jpg
+)
+
+Future feature - support updating columns.
+
+
+
 ## Installation
 
 Before running this project install node modules in both folders with this command:
@@ -68,7 +77,6 @@ https://aviationstack.com/
 ```
 
 ## Run project:
-Run backend:
 ```
 nodemon server.ts
 ```
@@ -77,3 +85,4 @@ or:
 ```
 nodemon server.ts
 ```
+<br> * nodemon running enables to run code in watch mode.
