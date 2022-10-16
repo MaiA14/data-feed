@@ -35,7 +35,7 @@ feed_data - json that represnts the data of the feed <br>
 
 ## Workflow
 
-![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665950544/a80t1375bblijwnowypn.jpg
+![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665956676/rflld9m2vbtdqknlhsrb.jpg
 )
 
 ## Prerequisites
@@ -60,16 +60,7 @@ Before running this project install node modules in both folders with this comma
 npm install
 ```
 
-## Run project:
-```
-nodemon server.ts
-```
-or:
-```
-npm run start
-```
 
-<br> * nodemon running enables to run code in watch mode.
 
 ## API
 <ins><b>1) Get data feed </ins></b> <br>
