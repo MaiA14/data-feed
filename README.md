@@ -156,6 +156,7 @@ curl --location --request POST 'http://localhost:9000/api/feed/updateRecordValue
 }''
 ```
 
+
 All data's fields should be supplied, otherwise server returns error
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665954566/agjnuh9qg17pxpoans40.png
 )
