@@ -43,7 +43,7 @@ export default class FeedController {
 
     public async updateRecordValue(req: TypedRequestBody<updateValueReq>, res: any) {
         console.log('FeedController updateRecordValue ', req.body);
-        if (!req.body || !req.body.data || !req.body.data.recordId || !req.body.data.valueToUpdate ||
+        if (!req.body || !req.body.data || !req.body.data.valueToUpdate ||
             !req.body.data.newValue) {
             console.log('Error 1 on FeedController updateRecordValue - could set record value');
             res.send(404, 'Error 1 - could set record value due to missing data parameters');

@@ -15,7 +15,7 @@ export class DBService {
     }
 
     public async connect(): Promise<any> {
-        return await this.db.connect();
+        return await this.db.connect(); // TODO: in the future, handle this
     }
 
     public getClient() {
