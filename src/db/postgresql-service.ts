@@ -1,4 +1,3 @@
-import { env } from "process";
 import { singleton } from "../decorators/singleton";
 import { Utils } from "../utils";
 import config from "./config";
