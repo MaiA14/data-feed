@@ -35,32 +35,9 @@ feed_data - json that represnts the data of the feed <br>
 
 ## Workflow
 
-<b><ins> 1) Login (future feature)</ins></b> <br>
-
-![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665942815/gxlq5wjbok7nf67lkjfq.jpg
+![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665950361/ffnaehjvka9beumdcsfb.jpg
 )
 
-After implementing login endpoint on server side, all the requests will be passed with Bearer token, that will make sure the system is secured.
-
-<b><ins> 2) Get data feed</ins></b> <br>
-Now that user is logged in, he is able to display feed
-
-![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665943505/g4pxxfwa7bkntqqvcpmn.jpg
-)
-
-<b><ins> 3) Update record's field sepcifed by user </ins></b>
-
-![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665944757/v4h8d50sbbw1muqqnepq.jpg
-)
-
-Future feature - support updating columns.
-
-<b><ins> 4) Filter feed </ins></b>
-
-![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665945841/co72qv3speej0ajfrxfa.jpg
-)
-
-Future feature - support contains, greater than, lower than, equal filter.
 
 ## Installation
 
