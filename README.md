@@ -55,7 +55,12 @@ Now that user is logged in, he is able to display feed
 
 Future feature - support updating columns.
 
+<b><ins> 4) Filter feed </ins></b>
 
+![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665945841/co72qv3speej0ajfrxfa.jpg
+)
+
+Future feature - support contains, greater than, lower than, equal filter.
 
 ## Installation
 
