@@ -23,9 +23,11 @@ export default class FeedController {
     public async get(req: TypedRequestBody<getDataReq>, res: any) {
         console.log('FeedController get', req.body ? req.body : null);
         let source;
-        if (req.body && req.body.source) {
-            source = req.body.source;
+        if (!req.body|| !req.body.source) {
+            res.send(404, 'Error 1 - could not get feed data, no source supplied');
         }
+
+        source = req.body.source;
 
         try {
             const feedData: any = await FeedService.getData(source);
@@ -35,7 +37,7 @@ export default class FeedController {
         }
         catch (e) {
             console.log('Error on FeedController get - could not get feed data ', e);
-            res.send(404, 'Error - could not get feed data');
+            res.send(404, 'Error 2 - could not get feed data');
         }
     }
 
@@ -44,7 +46,7 @@ export default class FeedController {
         if (!req.body || !req.body.data || !req.body.data.recordId || !req.body.data.valueToUpdate ||
             !req.body.data.newValue) {
             console.log('Error 1 on FeedController updateRecordValue - could set record value');
-            res.send(404, 'Error 1 - could set record value due to missing data parametres');
+            res.send(404, 'Error 1 - could set record value due to missing data parameters');
         }
         try {
             let recordId = req.body.data.recordId;

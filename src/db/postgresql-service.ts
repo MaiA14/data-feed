@@ -35,10 +35,12 @@ export class PostgresqlService {
         return this.client;
     }
 
+    // TODO: in the future, to check if there is more dynamic way to set data.
+    // Currently data is passed hard-coded only to enable DB operations 
     public async set(tableName: string, data: any): Promise<any> {
         await this.client.query(`INSERT INTO ${tableName} (feed_id,updated_time, user_id, feed_data) VALUES ('e8e62951-921b-4e83-a141',
         '2022-11-14 00:00:00', '84a01716-8eab-40bf-822f-2e0432688a38',
-        '${JSON.stringify(data)}');`);
+        '${JSON.stringify(data)}') ON CONFLICT (feed_id) DO NOTHING;`);
     }
 
     public async get(tableName: string, limit?: any, columns?: Array<string>): Promise<any> {
@@ -55,7 +57,7 @@ export class PostgresqlService {
             }
             results = limitedResults;
         }
-        
+
         if (columns && columns.length > 0) {
             results = Utils.filterFieldsFromArr(columns, results);
         }
