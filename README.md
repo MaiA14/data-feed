@@ -23,7 +23,7 @@ email <br>
 created_on - creation time of the user <br>
 last_login (might be helpful in future feature, for example - token refresh) <br>
 
-<b> Feed's table </b> <br>
+<b> Feed's table: </b> <br>
 feed_id (Primary key) <br>
 user_id (foriegn key, references user table) <br>
 updated_on - timestamp that represents the last time the feed was updated <br>
@@ -38,6 +38,25 @@ feed_data - json that represnts the data of the feed <br>
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665950544/a80t1375bblijwnowypn.jpg
 )
 
+
+## Endpoints
+<ins><b> 1) Get feed data </ins></b> <br>
+Retrieves feed according external source.<br>
+POST - http://localhost:9000/api/feed
+
+![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665951016/mdz2ihw6ikngfwyw4ylf.png
+)
+
+Try using curl:
+
+```
+curl --location --request POST 'http://localhost:9000/api/feed' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: connect.sid=s%3ATgv3GUfYzw7-EcNOhnaJVjy8NVcg5aWH.ZlJHeqmwkwnVIWzj0tENzz61oy2%2FiLbLnv0NRvC6CiI' \
+--data-raw '{
+    "source": "http://api.aviationstack.com/v1/flights?access_key=1d5da03a0ead670aa12f88e6031ad791&limit=5"
+}'
+```
 
 ## Installation
 
