@@ -47,7 +47,31 @@ The following technologies should be installed globally
 * Postgresql 
 
 
-## Endpoints
+Get a key from this site (or use the one I supplied)
+```
+https://aviationstack.com/
+```
+
+## Installation
+
+Before running this project install node modules in both folders with this command:
+
+```
+npm install
+```
+
+## Run project:
+```
+nodemon server.ts
+```
+or:
+```
+npm run start
+```
+
+<br> * nodemon running enables to run code in watch mode.
+
+## API
 <ins><b>1) Get data feed </ins></b> <br>
 Retrieves feed according external source.<br>
 POST - http://localhost:9000/api/feed
@@ -144,28 +168,3 @@ curl --location --request POST 'http://localhost:9000/api/feed/updateRecordValue
 All data's fields should be supplied, otherwise server returns error
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665954566/agjnuh9qg17pxpoans40.png
 )
-
-## Installation
-
-Before running this project install node modules in both folders with this command:
-
-```
-npm install
-```
-
-
-Get a key from this site (or used the one I supplied)
-```
-https://aviationstack.com/
-```
-
-## Run project:
-```
-nodemon server.ts
-```
-or:
-```
-npm run start
-```
-
-<br> * nodemon running enables to run code in watch mode.
