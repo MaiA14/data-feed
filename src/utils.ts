@@ -27,7 +27,6 @@ export class Utils {
         if (values.length > 0) {
             return values
         }
-        console.log('arr', arr)
         return arr;
     }
 }

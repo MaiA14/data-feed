@@ -16,7 +16,7 @@ export default class FeedController {
 
     public intializeRoutes() {
         this.router.post(this.path, this.get);
-        this.router.post(this.path + '/updateRecordValue', this.updateRecordValue);
+        this.router.post(this.path + '/updateField', this.updateField);
         this.router.post(this.path + '/filter', this.filter);
     }
 
@@ -24,7 +24,7 @@ export default class FeedController {
         console.log('FeedController get', req.body ? req.body : null);
         let source;
         if (!req.body|| !req.body.source) {
-            res.send(404, 'Error 1 - could not get feed data, no source supplied');
+            res.status(404).send('Error 1 - could not get feed data, no source supplied');
         }
 
         source = req.body.source;
@@ -37,26 +37,26 @@ export default class FeedController {
         }
         catch (e) {
             console.log('Error on FeedController get - could not get feed data ', e);
-            res.send(404, 'Error 2 - could not get feed data');
+            res.status(404).send('Error 2 - could not get feed data');
         }
     }
 
-    public async updateRecordValue(req: TypedRequestBody<updateValueReq>, res: any) {
-        console.log('FeedController updateRecordValue ', req.body);
-        if (!req.body || !req.body.data || !req.body.data.recordId || !req.body.data.valueToUpdate ||
+    public async updateField(req: TypedRequestBody<updateValueReq>, res: any) {
+        console.log('FeedController updateField ', req.body);
+        if (!req.body || !req.body.data || !req.body.data.fieldToUpdate ||
             !req.body.data.newValue) {
-            console.log('Error 1 on FeedController updateRecordValue - could set record value');
-            res.send(404, 'Error 1 - could set record value due to missing data parameters');
+            console.log('Error 1 on FeedController updateField - could set record value');
+            res.status(404).send('Error 1 - could set record value due to missing data parameters');
         }
         try {
-            let recordId = req.body.data.recordId;
-            let valueToUpdate = req.body.data.valueToUpdate;
+            let rowId = req.body.data.rowId;
+            let fieldToUpdate = req.body.data.fieldToUpdate;
             let newValue = req.body.data.newValue;
-            const updatedFeed = await FeedService.setValue(recordId, valueToUpdate, newValue);
+            const updatedFeed = await FeedService.setValue(rowId, fieldToUpdate, newValue);
             res.send({ data: updatedFeed });
         } catch (e) {
-            console.log('Error 2 on FeedController updateRecordValue - could set record value', e);
-            res.send(404, 'Error 2 - could set record value');
+            console.log('Error 2 on FeedController updateField - could set record value', e);
+            res.status(404).send('Error 2 - could set record value');
         }
     }
 
@@ -64,7 +64,7 @@ export default class FeedController {
     public async filter(req: TypedRequestBody<filterReq>, res: any) {
         console.log('FeedController filter ', req.body);
         if (!req.body || !req.body.filters) {
-            res.send(404, 'Error 1 - could not process filter due to missing filters');
+            res.status(404).send('Error 1 - could not process filter due to missing filters');
         }
 
         try {
@@ -82,6 +82,7 @@ export default class FeedController {
             res.send({ data: filteredData });
         } catch (e) {
             console.log('Error 2 on FeedController filter - could not filter data', e);
+            res.status(404).send('Error 2 - could not filter data');
         }
     }
 }

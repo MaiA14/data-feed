@@ -5,8 +5,8 @@ export interface getDataReq extends Express.Request {
 
 export interface updateValueReq extends Express.Request {
     data: {
-        recordId?: number;
-        valueToUpdate: string;
+        rowId?: number;
+        fieldToUpdate: string;
         newValue: string;
     }
 }
