@@ -35,20 +35,20 @@ feed_data - json that represnts the data of the feed <br>
 
 ## Workflow
 
-<ins> 1) Login (future feature)</ins> <br>
+<b><ins> 1) Login (future feature)</ins></b> <br>
 
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665942815/gxlq5wjbok7nf67lkjfq.jpg
 )
 
 After implementing login endpoint on server side, all the requests will be passed with Bearer token, that will make sure the system is secured.
 
-<ins> 2) Get data feed</ins> <br>
+<b><ins> 2) Get data feed</ins></b> <br>
 Now that user is logged in, he is able to display feed
 
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665943505/g4pxxfwa7bkntqqvcpmn.jpg
 )
 
-<ins> 3) Update record's field sepcifed by user </ins>
+<b><ins> 3) Update record's field sepcifed by user </ins></b>
 
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665944757/v4h8d50sbbw1muqqnepq.jpg
 )
