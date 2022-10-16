@@ -1,6 +1,6 @@
 # Data feed
 
-A company is building a system for managing data feeds input from external sources. <br>
+A company is building a system for managing data feeds inputs from external sources. <br>
 Data feed is a collection of data that has keys and values ordered according to specific
 structure. <br>
 Each source has a different way to login and extract the relevant data feed. <br>
@@ -8,12 +8,12 @@ User can filter data using display options sidebar or update field value with ne
 
 ## Design
 
-User should be logged in in order to see feed data
+The user should be logged into the system to view the data feed.
 
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665940886/wg7sdygutef3ivwoixwo.png
 )
 
-That's mean that user is able to see one feed at time. <br>
+It means that the user can see only one feed at a time. <br>
 
 <b> User's table: </b> <br>
 user_id (Primary key) <br>
@@ -26,7 +26,7 @@ last_login (might be helpful in future feature, for example - token refresh) <br
 <b> Feed's table </b> <br>
 feed_id (Primary key) <br>
 user_id (foriegn key, references user table) <br>
-updated_on - timestamp to represent feed creation <br>
+updated_on - timestamp that represents the last time the feed was updated <br>
 feed_data - json that represnts the data of the feed <br>
 
 
@@ -35,7 +35,7 @@ feed_data - json that represnts the data of the feed <br>
 
 ## Workflow
 
-![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665950361/ffnaehjvka9beumdcsfb.jpg
+![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665950544/a80t1375bblijwnowypn.jpg
 )
 
 
