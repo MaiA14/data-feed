@@ -15,7 +15,7 @@ User should be logged in in order to see feed data
 
 That's mean that user is able to see one feed at time. <br>
 
-<b> user's table: </b> <br>
+<b> User's table: </b> <br>
 user_id (Primary key) <br>
 username <br>
 pwd - password (in order to enable login functionality) <br>
@@ -23,7 +23,7 @@ email <br>
 created_on - creation time of the user <br>
 last_login (might be helpful in future feature, for example - token refresh) <br>
 
-<b> feed's table </b> <br>
+<b> Feed's table </b> <br>
 feed_id (Primary key) <br>
 user_id (foriegn key, references user table) <br>
 updated_on - timestamp to represent feed creation <br>
@@ -35,20 +35,20 @@ feed_data - json that represnts the data of the feed <br>
 
 ## Workflow
 
-<b><u> 1) Login (future feature)</b></u> <br>
+<ins> 1) Login (future feature)</ins> <br>
 
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665942815/gxlq5wjbok7nf67lkjfq.jpg
 )
 
 After implementing login endpoint on server side, all the requests will be passed with Bearer token, that will make sure the system is secured.
 
-<b><u> 2) Get data feed</b></u> <br>
+<ins> 2) Get data feed</ins> <br>
 Now that user is logged in, he is able to display feed
 
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665943505/g4pxxfwa7bkntqqvcpmn.jpg
 )
 
-<b><u> 3) Update record's field sepcifed by user </b> </u>
+<ins> 3) Update record's field sepcifed by user </ins>
 
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665944757/v4h8d50sbbw1muqqnepq.jpg
 )
