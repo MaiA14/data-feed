@@ -1,9 +1,9 @@
 # Data feed
 
-A company is building a system for managing data feeds input from external sources.
+A company is building a system for managing data feeds input from external sources. <br>
 Data feed is a collection of data that has keys and values ordered according to specific
-structure.
-Each source has a different way to login and extract the relevant data feed.
+structure. <br>
+Each source has a different way to login and extract the relevant data feed. <br>
 User can filter data using display options sidebar or update field value with new value.
 
 ## Design
@@ -13,21 +13,21 @@ User should be logged in in order to see feed data
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665940886/wg7sdygutef3ivwoixwo.png
 )
 
-That's mean that user is able to see one feed at time.
+That's mean that user is able to see one feed at time. <br>
 
-user's table contains the following fields:
-user_id (Primary key) 
-username 
-pwd - password (in order to enable login functionality)
-email
-created_on - creation time of the user
-last_login (might be helpful in future feature, for example - token refresh)
+user's table contains the following fields: <br>
+user_id (Primary key) <br>
+username <br>
+pwd - password (in order to enable login functionality) <br>
+email <br>
+created_on - creation time of the user <br>
+last_login (might be helpful in future feature, for example - token refresh) <br>
 
-feed's table contains the following fields:
-feed_id (Primary key)
-user_id (foriegn key, references user table)
-updated_on - timestamp to represent feed creation
-feed_data - json that represnts the data of the feed
+feed's table contains the following fields: <br>
+feed_id (Primary key) <br>
+user_id (foriegn key, references user table) <br>
+updated_on - timestamp to represent feed creation <br>
+feed_data - json that represnts the data of the feed <br>
 
 
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665940985/asyjte1jsybiicre2g3l.png
@@ -35,14 +35,14 @@ feed_data - json that represnts the data of the feed
 
 ## Workflow
 
-Login (future feature)
+<b>Login (future feature)</b> <br>
 
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665942815/gxlq5wjbok7nf67lkjfq.jpg
 )
 
 After implementing login endpoint on server side, all the requests will be passed with Bearer token, that will make sure the system is secured.
 
-Get data feed
+<b>Get data feed</b> <br>
 Now that user is logged in, he is able to display feed
 
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665943505/g4pxxfwa7bkntqqvcpmn.jpg
