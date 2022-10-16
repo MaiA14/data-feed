@@ -38,6 +38,14 @@ feed_data - json that represnts the data of the feed <br>
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665950544/a80t1375bblijwnowypn.jpg
 )
 
+## Prerequisites
+The following technologies should be installed globally
+* Node (preferred version / project version - 14.15.3)
+* ts-node
+* TypeScript (latest)
+* Nodemon 
+* Postgresql 
+
 
 ## Endpoints
 <ins><b>1) Get data feed </ins></b> <br>
@@ -145,11 +153,6 @@ Before running this project install node modules in both folders with this comma
 npm install
 ```
 
-create .env file with this variable in backend folder:
-
-```
-API_KEY=
-```
 
 Get a key from this site (or used the one I supplied)
 ```
@@ -159,6 +162,10 @@ https://aviationstack.com/
 ## Run project:
 ```
 nodemon server.ts
+```
+or:
+```
+npm run start
 ```
 
 <br> * nodemon running enables to run code in watch mode.
