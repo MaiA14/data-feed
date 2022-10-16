@@ -129,7 +129,7 @@ Show only flight date & flight status columns:
 <ins><b>3) Update field </ins></b> <br>
 You can update field by passing the field name you want to alter & the new value. <br>
 Note: currently this feature supports updating one field of row. <br>
-POST - http://localhost:9000/api/feed/updateRecordValue <br>
+POST - http://localhost:9000/api/feed/updateField <br>
 
 Let's say we want to update the first row (first record) with a new value for the field "live". <br>
 Original field equals null as you can see: <br>
@@ -144,13 +144,13 @@ After sending the request to the server you will notice the value alterd to 5.
 Try using curl:
 
 ```
-curl --location --request POST 'http://localhost:9000/api/feed/updateRecordValue' \
+curl --location --request POST 'http://localhost:9000/api/feed/updateField' \
 --header 'Content-Type: application/json' \
 --header 'Cookie: connect.sid=s%3AwIcv2CWOo4MfACEOzmeyAcOHIOjz0JI-.NVuIKBNKBIAh1%2F7CVQD9d4khNV6pFOqZBSlfCdJGGK0' \
 --data-raw '{
     "data": {
-        "recordId": 1,
-        "valueToUpdate": "live",
+        "rowId": 1,
+        "fieldToUpdate": "live",
         "newValue": "5"
     }
 }''
