@@ -40,7 +40,7 @@ feed_data - json that represnts the data of the feed <br>
 
 
 ## Endpoints
-<ins><b> 1) Get feed data </ins></b> <br>
+<ins><b> 1) Get data feed </ins></b> <br>
 Retrieves feed according external source.<br>
 POST - http://localhost:9000/api/feed
 
@@ -57,6 +57,11 @@ curl --location --request POST 'http://localhost:9000/api/feed' \
     "source": "http://api.aviationstack.com/v1/flights?access_key=1d5da03a0ead670aa12f88e6031ad791&limit=5"
 }'
 ```
+
+In case there source is not supplied by client, server returns error
+
+![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665951480/cp5dzszhrxd9mwsi9dgs.png
+)
 
 ## Installation
 
