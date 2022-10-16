@@ -40,7 +40,7 @@ feed_data - json that represnts the data of the feed <br>
 
 
 ## Endpoints
-<ins><b> 1) Get data feed </ins></b> <br>
+<ins><b>1) Get data feed </ins></b> <br>
 Retrieves feed according external source.<br>
 POST - http://localhost:9000/api/feed
 
@@ -63,7 +63,7 @@ In case there source is not supplied by client, server returns error
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665951480/cp5dzszhrxd9mwsi9dgs.png
 )
 
-<ins><b> 2) Filter feed </ins></b> <br>
+<ins><b>2) Filter feed </ins></b> <br>
 Filters according specified filter.<br>
 Supported filters: <br>
 - Limit results - choose the number of rows you want to see in the feed. <br>
@@ -103,6 +103,40 @@ Show only flight date & flight status columns:
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665952958/y7yt4olnkf75bforw3k9.png
 )
 
+<ins><b>3) Update field </ins></b> <br>
+You can update field by passing the field name you want to alter & the new value. <br>
+Note: currently this feature supports updating one field of row. <br>
+POST - http://localhost:9000/api/feed/updateRecordValue <br>
+
+Let's say we want to update the first row (first record) with a new value for the field "live". <br>
+Original field equals null as you can see: <br>
+
+![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665954147/lkk7rmp7wwoqltiynsol.png
+)
+
+After sending the request to the server you will notice the value alterd to 5.
+![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665954303/efw4kgofdxvmzdqflkeu.png
+)
+
+Try using curl:
+
+```
+curl --location --request POST 'http://localhost:9000/api/feed/updateRecordValue' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: connect.sid=s%3AwIcv2CWOo4MfACEOzmeyAcOHIOjz0JI-.NVuIKBNKBIAh1%2F7CVQD9d4khNV6pFOqZBSlfCdJGGK0' \
+--data-raw '{
+    "data": {
+        "recordId": 1,
+        "valueToUpdate": "live",
+        "newValue": "5"
+    }
+}''
+```
+
+All data's fields should be supplied, otherwise server returns error
+![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665954566/agjnuh9qg17pxpoans40.png
+)
+
 ## Installation
 
 Before running this project install node modules in both folders with this command:
@@ -127,8 +161,4 @@ https://aviationstack.com/
 nodemon server.ts
 ```
 
-or:
-```
-nodemon server.ts
-```
 <br> * nodemon running enables to run code in watch mode.
