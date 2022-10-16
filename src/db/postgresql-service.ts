@@ -56,9 +56,10 @@ export class PostgresqlService {
             results = limitedResults;
         }
         
-        if (columns !== null) {
+        if (columns && columns.length > 0) {
             results = Utils.filterFieldsFromArr(columns, results);
         }
+        console.log(results);
         return results;
     }
 }

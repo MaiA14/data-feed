@@ -5,7 +5,7 @@ const DB_PASSWORD = '4390';
 const SERVER_PORT = 9000;
 const SERVER_IP = '127.0.0.1'; // localhost
 
-const API_KEY = '290e85248862357a58d4f38cb67b1dc1';
+const API_KEY = '1d5da03a0ead670aa12f88e6031ad791';
 const LIMIT_FEED_API_RESULTS = 5;
 
 const SERVER = {
