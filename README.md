@@ -48,7 +48,7 @@ Now that user is logged in, he is able to display feed
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665943505/g4pxxfwa7bkntqqvcpmn.jpg
 )
 
-<b> 3) Update record's field sepcifed by user </b> <b>
+<b> 3) Update record's field sepcifed by user </b> 
 
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665944757/v4h8d50sbbw1muqqnepq.jpg
 )
