@@ -80,7 +80,7 @@ curl --location --request POST 'http://localhost:9000/api/feed' \
 --header 'Content-Type: application/json' \
 --header 'Cookie: connect.sid=s%3ATgv3GUfYzw7-EcNOhnaJVjy8NVcg5aWH.ZlJHeqmwkwnVIWzj0tENzz61oy2%2FiLbLnv0NRvC6CiI' \
 --data-raw '{
-    "source": "http://api.aviationstack.com/v1/flights?access_key=1d5da03a0ead670aa12f88e6031ad791&limit=5"
+    "source": "http://api.aviationstack.com/v1/flights?access_key=${API_KEY}&limit=5"
 }'
 ```
 
