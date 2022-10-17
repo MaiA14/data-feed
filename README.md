@@ -23,7 +23,8 @@ email <br>
 created_on - creation time of the user <br>
 last_login (might be helpful in future feature, for example - token refresh) <br>
 
-Note: in the future, there will be secured login using token. This change will required adding token to user's table. Token will be generated as hash of email & password. The pwd (user's password) that is saved in DB will be encrypted. It means that in login implemention, the server should decrypt the saved password from DB in order to compare it to the sent password by client. If passwords are equal, server returns success, otherwise - failure. On login implemention we also need to consider the case where email & password exist in DB but the token expired, then server need to generate new one and user should be able to login with the new token. (client should support updating token on his side).
+<ins> Note: </ins> <br>
+in the future, there will be secured login using token. This change will required adding token to user's table. Token will be generated as hash of email & password. The pwd (user's password) that is saved in DB will be encrypted. It means that in login implemention, the server should decrypt the saved password from DB in order to compare it to the sent password by client. If passwords are equal, server returns success, otherwise - failure. On login implemention we also need to consider the case where email & password exist in DB but the token expired, then server need to generate new one and user should be able to login with the new token. (client should support updating token on his side).
 
 <b> Feed's table: </b> <br>
 feed_id (Primary key) <br>
@@ -56,7 +57,7 @@ https://aviationstack.com/
 
 ## Installation
 
-Before running this project install node modules in both folders with this command:
+Before running this project install node modules with this command:
 
 ```
 npm install
@@ -93,7 +94,7 @@ Filters according specified filters.<br>
 Supported filters: <br>
 - Limit results - choose the number of rows you want to see in the feed. <br>
 - Show specified columns - choose which columns you want to see in the feed <br>
-Note: you can choose one of those filters or both. <br>
+<ins> Note: </ins> you can choose one of those filters or both. <br>
 POST - http://localhost:9000/api/feed/filter <br>
 
 An example of both filters applied:
@@ -130,7 +131,7 @@ Show only flight date & flight status columns:
 
 <ins><b>3) Update field </ins></b> <br>
 You can update field by passing the field name you want to alter & the new value. <br>
-Note: currently this feature updating row & multiple rows of specific column. <br>
+<ins> Note: </ins> currently this feature updating row & multiple rows of specific column. <br>
 POST - http://localhost:9000/api/feed/updateField <br>
 
 Let's say we want to update the first row (first record) with a new value for the field "live". <br>
