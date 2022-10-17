@@ -33,7 +33,7 @@ updated_on - timestamp that represents the last time the feed was updated <br>
 feed_data - json that represnts the data of the feed <br>
 
 
-![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665940985/asyjte1jsybiicre2g3l.png
+![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1666027394/fkcssttopv7o83mgd3ll.png
 )
 
 ## Workflow
