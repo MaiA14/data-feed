@@ -38,7 +38,7 @@ feed_data - json that represnts the data of the feed <br>
 
 ## Workflow
 
-![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665956676/rflld9m2vbtdqknlhsrb.jpg
+![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1666006730/xmgthwfaildm4bg8xvra.jpg
 )
 
 ## Prerequisites
@@ -67,7 +67,7 @@ npm install
 
 ## API
 <ins><b>1) Get data feed </ins></b> <br>
-Retrieves feed according external source.<br>
+Retrieves feed from an external source.<br>
 POST - http://localhost:9000/api/feed
 
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665951016/mdz2ihw6ikngfwyw4ylf.png
@@ -84,18 +84,18 @@ curl --location --request POST 'http://localhost:9000/api/feed' \
 }'
 ```
 
-In case there source is not supplied by client, server returns error
+In case the source is not supplied by the client, the server returns an error.
 
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665951480/cp5dzszhrxd9mwsi9dgs.png
 )
 
 <ins><b>2) Filter feed </ins></b> <br>
-Filters according specified filters.<br>
+Filters are based on a specific filter.<br>
 Supported filters: <br>
 - Limit results - choose the number of rows you want to see in the feed. <br>
 - Show specified columns - choose which columns you want to see in the feed <br> <br>
 <ins> Note:</ins> 
-* You can choose one of those filters or both. <br>
+* You can choose one of the following filters or both. <br>
 * Filters like contains, greater than, lower than, will be implemented in the future.
 
 POST - http://localhost:9000/api/feed/filter <br>
@@ -118,7 +118,9 @@ curl --location --request POST 'http://localhost:9000/api/feed/filter' \
 }'
 ```
 
-In case the array of columns is empty, filter consider it as not supplied (null) and returns result according the other filter, in this case - limit.
+In case no column is sent, the filter(s) is ignored since there is no way to filter an empty set of data – this scenario is equal to not sending a request at all, and in a real-world system, the client should prevent it from going out. It is added here as a safeguard
+If the body of the request is empty, the server returns an error.
+
 
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665952367/hogscsbevd11prjbbc1e.png
 )
@@ -143,7 +145,8 @@ Original field equals null as you can see: <br>
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665963184/bftz3y8ro86dsy2uqlnx.png
 )
 
-After sending the request to the server you will notice the value alterd to 5.
+After sending the request to the server, you will notice the value is altered to 5.
+
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665963225/bbxeqsfr7m7wkv1vh3cy.png
 )
 
@@ -163,6 +166,6 @@ curl --location --request POST 'http://localhost:9000/api/feed/updateField' \
 ```
 
 
-All data's fields should be supplied, otherwise server returns error
+All data fields should be supplied. Otherwise, the server returns an error.
 ![Image](https://res.cloudinary.com/dtwqtpteb/image/upload/v1665963344/l8eezirjrzrpuxhtxfrx.png
 )
