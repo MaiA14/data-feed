@@ -93,7 +93,7 @@ In case there source is not supplied by client, server returns error
 Filters according specified filters.<br>
 Supported filters: <br>
 - Limit results - choose the number of rows you want to see in the feed. <br>
-- Show specified columns - choose which columns you want to see in the feed <br>
+- Show specified columns - choose which columns you want to see in the feed <br> <br>
 <ins> Note: </ins> you can choose one of those filters or both. <br>
 POST - http://localhost:9000/api/feed/filter <br>
 
@@ -131,7 +131,7 @@ Show only flight date & flight status columns:
 
 <ins><b>3) Update field </ins></b> <br>
 You can update field by passing the field name you want to alter & the new value. <br>
-<ins> Note: </ins> currently this feature updating row & multiple rows of specific column. <br>
+<ins> Note: </ins> currently this feature updating row & multiple rows of specific column. <br> <br>
 POST - http://localhost:9000/api/feed/updateField <br>
 
 Let's say we want to update the first row (first record) with a new value for the field "live". <br>
