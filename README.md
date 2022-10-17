@@ -94,7 +94,7 @@ Filters according specified filters.<br>
 Supported filters: <br>
 - Limit results - choose the number of rows you want to see in the feed. <br>
 - Show specified columns - choose which columns you want to see in the feed <br> <br>
-<ins> Note: </ins> you can choose one of those filters or both. <br>
+<ins> Note: </ins> you can choose one of those filters or both. <br> <br>
 POST - http://localhost:9000/api/feed/filter <br>
 
 An example of both filters applied:
