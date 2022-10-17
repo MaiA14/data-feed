@@ -23,6 +23,8 @@ email <br>
 created_on - creation time of the user <br>
 last_login (might be helpful in future feature, for example - token refresh) <br>
 
+Note: in the future, there will be secured login using token. This change will required adding token to user's table. Token will be generated as hash of email & password. The pwd (user's password) that is saved in DB will be encrypted. It means that in login implemention, the server should decrypt the saved password from DB in order to compare it to the sent password by client. If passwords are equal, server returns success, otherwise - failure. On login implemention we also need to consider the case where email & password exist in DB but the token expired, then server need to generate new one and user should be able to login with the new token. (client should support updating token on his side).
+
 <b> Feed's table: </b> <br>
 feed_id (Primary key) <br>
 user_id (foriegn key, references user table) <br>
@@ -87,7 +89,7 @@ In case there source is not supplied by client, server returns error
 )
 
 <ins><b>2) Filter feed </ins></b> <br>
-Filters according specified filter.<br>
+Filters according specified filters.<br>
 Supported filters: <br>
 - Limit results - choose the number of rows you want to see in the feed. <br>
 - Show specified columns - choose which columns you want to see in the feed <br>
