@@ -98,7 +98,7 @@ Supported filters: <br>
 * You can choose one of those filters or both. <br>
 * Filters like contains, greater than, lower than, will be implemented in the future.
 
-<br> <br>
+<br>
 POST - http://localhost:9000/api/feed/filter <br>
 
 An example of both filters applied:
