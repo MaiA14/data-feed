@@ -94,7 +94,7 @@ Filters according specified filters.<br>
 Supported filters: <br>
 - Limit results - choose the number of rows you want to see in the feed. <br>
 - Show specified columns - choose which columns you want to see in the feed <br> <br>
-<ins> Note:</ins> <br>
+<ins> Note:</ins> 
 * You can choose one of those filters or both. <br>
 * Filters like contains, greater than, lower than, will be implemented in the future.
 
