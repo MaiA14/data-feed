@@ -47,7 +47,7 @@ The following technologies should be installed globally
 * ts-node
 * TypeScript (latest)
 * Nodemon 
-* Postgresql 
+* PostgreSQL
 
 
 Get a key from this site (or use the one I supplied)
